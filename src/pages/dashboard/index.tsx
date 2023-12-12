@@ -1,6 +1,10 @@
+import Layout from "./components/Layout";
 
 export default function AdminDashBoard() {
   return (
-    <div>AdminDashBoard</div>
+    <>
+     <Layout/>
+     <h1>hahah</h1>
+    </>
   )
 }
