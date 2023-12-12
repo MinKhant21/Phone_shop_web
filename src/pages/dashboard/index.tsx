@@ -11,11 +11,11 @@ export default function AdminDashBoard() {
           <div className=" py-16 px-40  rounded-md shadow-md border">Users</div>
           <div className=" py-16 px-40  rounded-md shadow-md border">Users</div>
         </div>
-        <div className=" flex gap-10 mt-10">
+        <div className=" flex gap-10 mt-10 items-center">
           <div className=" w-[740px]">
             <MonthlyChat/>
           </div>
-          <div className="flex justify-center items-center mx-auto w-[500px]">
+          <div className="flex justify-center items-center mx-auto w-[400px]">
             <DoughnutChart/>
           </div>
         </div>
