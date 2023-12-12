@@ -49,5 +49,5 @@ const data = {
 };
 
 export default function MonthlyChat(){
-  return <Bar options={options} data={data} />;
+  return <Bar  options={options} data={data} />;
 }
