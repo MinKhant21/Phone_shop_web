@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
+    "chart.js": "^4.4.1",
+    "faker": "^6.6.6",
     "react": "^18.2.0",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.20.1",

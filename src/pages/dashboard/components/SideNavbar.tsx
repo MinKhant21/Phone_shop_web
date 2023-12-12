@@ -3,7 +3,7 @@
 function SideNavbar() {
   return (
     <>
-      <div className="flex justify-center min-h-screen ">
+      <div className="md:flex justify-center min-h-screen  hidden ">
         <div className="w-80 shadow-md ">
           <div className="px-6 pt-8">
             <div className="flex items-center justify-between">
