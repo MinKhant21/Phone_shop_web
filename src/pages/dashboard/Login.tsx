@@ -1,7 +1,9 @@
-
+import { useState } from "react";
+import { FaEye ,FaEyeSlash } from "react-icons/fa";
 export default function Login() {
+  const [show,setShow] = useState(true);
   const HandleLogin = () => {
-    
+
   }
   return (
     <div className=" h-screen w-full flex justify-center items-center mx-auto">
@@ -13,9 +15,18 @@ export default function Login() {
           <label htmlFor="" className=" font-sans font-bold mr-9">Email</label>: 
           <input type="text" name="email" className=" w-1/2 p-1 rounded-md border pl-4" placeholder="Enter Your Email" />
         </div>
-        <div className=" flex justify-center items-center gap-4 mt-10">
+        <div className=" flex justify-center items-center gap-4 mt-10  ">
           <label htmlFor="" className=" font-sans font-bold ">Password</label>:
-          <input type="text" name="password" className=" w-1/2 p-1 rounded-md bg-white border pl-4" placeholder="Enter Your password" />
+            <div className="w-1/2  relative">
+              <input type={`${show ? 'password' : 'text'}`} name="password" className="w-full p-1 rounded-md bg-white border pl-4" placeholder="Enter Your password" />
+              <div className=" absolute top-2 right-3 cursor-pointer" onClick={()=>setShow(!show)}>
+                {
+                  show ?
+                  <FaEye/> :
+                  <FaEyeSlash/>
+                }
+              </div>
+            </div>
         </div>
         <div className="flex justify-center items-center mt-10">
           <button  onClick={HandleLogin} className=" p-2 bg-purple-400 text-white w-2/3 rounded-md">Login</button>
