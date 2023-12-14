@@ -1,17 +1,29 @@
 import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom";
-import Layout from "../pages/dashboard/components/Layout";
+import DLayout from "../pages/dashboard/components/Layout";
 import AdminDashBoard from "../pages/dashboard";
 import Login from "../pages/dashboard/Login";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import Home from "../pages/front/Home";
+import Layout from "../pages/front/components/Layout";
 
 export  const Routes = () => {
      const {user} : any = useContext(AuthContext)
      let isAuth = Boolean(user)
      const router = createBrowserRouter([
           {
+               path : "/",
+               element : <Layout/>,
+               children:[
+                    {
+                         path:"",
+                         element : <Home/>
+                    }
+               ]
+          },
+          {
                path:"/dashboard",
-               element: isAuth ? <Layout/> : <Navigate to={"/dashboard/login"}/>,
+               element: isAuth ? <DLayout/> : <Navigate to={"/dashboard/login"}/>,
                children:[
                     {
                          path:"",
