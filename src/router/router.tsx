@@ -1,23 +1,31 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "../pages/dashboard/components/Layout";
 import AdminDashBoard from "../pages/dashboard";
 import Login from "../pages/dashboard/Login";
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
 
-const router = createBrowserRouter([
-     {
-          path:"/dashboard",
-          element:<Layout/>,
-          children:[
-               {
-                    path:"",
-                    element:<AdminDashBoard/>
-               }
-          ],
-     },
-     {
-          path:"/dashboard/login",
-          element:<Login/>
-     }
-])
+export  const Routes = () => {
+     const {user} : any = useContext(AuthContext)
+     let isAuth = Boolean(user)
+     const router = createBrowserRouter([
+          {
+               path:"/dashboard",
+               element: isAuth ? <Layout/> : <Navigate to={"/dashboard/login"}/>,
+               children:[
+                    {
+                         path:"",
+                         element:<AdminDashBoard/>
+                    }
+               ],
+          },
+          {
+               path:"/dashboard/login",
+               element:isAuth ? <Login/> : <Navigate to={"/dashboard"}/>,
+          }
+     ])
 
-export default router
+     return(
+          <RouterProvider router={router}/>
+     )
+}

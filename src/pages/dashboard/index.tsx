@@ -3,6 +3,7 @@ import DoughnutChart from "./components/chart/DoughnutChart";
 // import UserTable from '../dashboard/components/UserTable'
 
 export default function AdminDashBoard() {
+  
   return (
     <>
       <div className=" p-10 w-full">
