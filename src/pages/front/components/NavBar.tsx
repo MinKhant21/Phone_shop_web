@@ -8,6 +8,7 @@ import {
      SunIcon,
      Bars3Icon,
    } from "@heroicons/react/24/outline";
+import { Link } from 'react-router-dom';
 const NavBar = ()  => {
      const [toggleMenu, setToggleMenu] = useState(false);
   return (
@@ -46,8 +47,8 @@ const NavBar = ()  => {
                          <GrCart className="" />
                          <span className=' absolute text-sm bottom-1 left-5  '>1</span>
                     </div>
-                    <p className=' py-1 bg-slate-100 px-4 font-sans text-md font-bold rounded-lg'>Login</p>
-                    <p className=' py-1 bg-gray-700 text-white px-4 font-sans text-md font-bold rounded-lg'>Sign Up</p>
+                    <Link to={'/login'} className=' py-1 bg-slate-100 px-4 font-sans text-md font-bold rounded-lg hover:bg-slate-200'>Login</Link>
+                    <Link className=' py-1 bg-gray-700 text-white px-4 font-sans text-md font-bold rounded-lg'>Sign Up</Link>
                </div>
               </div>
               {/* Mobile navigation toggle */}

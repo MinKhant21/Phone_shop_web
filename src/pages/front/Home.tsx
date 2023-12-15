@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 export default function Home() {
   
   return (
-    <main className="  flex justify-center items-center mt-10">
+    <main className="  flex justify-center items-center mt-5">
       <div className="flex flex-wrap md:flex-nowrap  gap-5 md:gap-10 md:mx-10">
         <Link className='transition duration-1000 ease-in-out  hover:scale-110  px-5 rounded-lg shadow-md  w-[230px] md:w-1/4 '>
               <img src={Phone15} className=' w-full h-2/4 ' alt="" />
