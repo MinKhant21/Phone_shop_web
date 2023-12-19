@@ -13,7 +13,7 @@ const NavBar = ()  => {
      const [toggleMenu, setToggleMenu] = useState(false);
   return (
     
-          <nav>
+          <nav className=' '>
         <div className="mx-auto shadow-md">
           <div className="flex mx-auto justify-between w-5/6 ">
             {/* Primary menu and logo */}

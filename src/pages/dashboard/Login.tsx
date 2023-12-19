@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaEye ,FaEyeSlash } from "react-icons/fa";
 import useSubmit from "../../hooks/useSubmit";
 interface Data {
@@ -10,7 +10,6 @@ export default function Login() {
   const [email,setEmail] = useState<string>('');
   const [password,setPassword] = useState<string>('');
   const {Login,loading,message} = useSubmit();
-
   const HandleLogin = async (e:any) => {
     e.preventDefault();
     let data:Data = {

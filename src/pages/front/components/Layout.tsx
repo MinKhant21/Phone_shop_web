@@ -6,7 +6,7 @@ export default function Layout() {
   const location = useLocation();
 
   return (
-    <>
+  <>
     <NavBar/>
     <SwitchTransition>
       <CSSTransition timeout={200} classNames="fade" key={location.pathname}>
