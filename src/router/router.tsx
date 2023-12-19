@@ -8,6 +8,7 @@ import { AuthContext } from "../context/AuthContext";
 import Home from "../pages/front/Home";
 import Layout from "../pages/front/components/Layout";
 import UserForm from '../pages/front/UserForm'
+import NotFound from "../component/NotFound";
 
 export  const Routes = () => {
      const {user} : any = useContext(AuthContext)
@@ -40,6 +41,10 @@ export  const Routes = () => {
           {
                path:"/dashboard/login",
                element:isAuth ? <Login/> : <Navigate to={"/dashboard"}/>,
+          },
+          {
+               path:"*",
+               element:<NotFound/>
           }
      ])
 
