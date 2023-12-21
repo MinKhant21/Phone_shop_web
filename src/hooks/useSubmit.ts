@@ -9,6 +9,7 @@ interface Data {
 const useSubmit =  () => {
      const [loading,setLoading] = useState(false);
      const [message , setMessage] = useState('');
+     const [user ,setUser] = useState([])
      const Login = async (data : Data ) => {
           setLoading(true)
           let email : string= data.email
@@ -31,6 +32,7 @@ const useSubmit =  () => {
                          localStorage.setItem('userData',JSON.stringify(result.data.data))
                          setLoading(false)
                          setMessage(result.data.message)
+                         setUser(result.data.data)
                     }
                     if(result.data.status == 500){
                          setLoading(false)
@@ -44,7 +46,8 @@ const useSubmit =  () => {
      return {
           Login,
           loading,
-          message
+          message,
+          user
      }
 }
 

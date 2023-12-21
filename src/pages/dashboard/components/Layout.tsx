@@ -6,7 +6,7 @@ function Layout() {
      const location = useLocation();
      return (
           <>
-             <div className=' flex'>
+             <div className='flex justify-center '>
                <SideNavbar/>
                <SwitchTransition>
                     <CSSTransition timeout={200} classNames="fade" key={location.pathname}>

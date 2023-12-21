@@ -10,9 +10,9 @@ import Layout from "../pages/front/components/Layout";
 import UserForm from '../pages/front/UserForm'
 import NotFound from "../component/NotFound";
 export const Routes = () => {
-     const { user }: any = useContext(AuthContext);
+     const { user   }: any = useContext(AuthContext);
      const isAuth = Boolean(user);
-   
+     
      const getDashboardRoute = () => {
        if (isAuth) {
          return {
@@ -25,11 +25,13 @@ export const Routes = () => {
              },
            ],
          };
+       }else{
+          return {
+               path: "/dashboard/login",
+               element: <Login />,
+             };
        }
-       return {
-         path: "/dashboard/login",
-         element: <Login />,
-       };
+      
      };
    
      const routes = [

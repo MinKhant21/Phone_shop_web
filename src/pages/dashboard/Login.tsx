@@ -9,16 +9,19 @@ export default function Login() {
   const [show,setShow] = useState(true);
   const [email,setEmail] = useState<string>('');
   const [password,setPassword] = useState<string>('');
-  const {Login,loading,message} = useSubmit();
+  const {Login,loading,message,user} = useSubmit();
+
   const HandleLogin = async (e:any) => {
     e.preventDefault();
     let data:Data = {
       email,
       password
     }
-    let resData = await Login(data)
-    console.log(resData)
+    await Login(data)
   }
+  useEffect(()=>{
+   
+  },[])
   return (
     <div className=" h-screen w-full flex justify-center items-center mx-auto">
       <h1>{loading && <p>loading.........</p>}</h1>
