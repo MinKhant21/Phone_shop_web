@@ -10,7 +10,9 @@ function Layout() {
                <SideNavbar/>
                <SwitchTransition>
                     <CSSTransition timeout={200} classNames="fade" key={location.pathname}>
-                    <Outlet/>
+                         <div className=" p-10 w-full">
+                              <Outlet/>
+                         </div>
                     </CSSTransition>
                </SwitchTransition>
              </div>

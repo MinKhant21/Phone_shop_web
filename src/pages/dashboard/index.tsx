@@ -6,7 +6,6 @@ export default function AdminDashBoard() {
   
   return (
     <>
-      <div className=" p-10 w-full">
         <div className=" flex justify-between items-center">
           <div className=" py-16 px-40  rounded-md shadow-md border">Users</div>
           <div className=" py-16 px-40  rounded-md shadow-md border">Users</div>
@@ -22,7 +21,6 @@ export default function AdminDashBoard() {
           </div>
         </div>
         {/* <UserTable/> */}
-      </div>
     </>
   )
 }
