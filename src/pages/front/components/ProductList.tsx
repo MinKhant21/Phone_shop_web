@@ -3,94 +3,80 @@ import Phone15 from '../../../assets/phone/15.jpeg'
 import { Link } from 'react-router-dom'
 export default function ProductList() {
   return (
-    <div  className="  flex justify-center items-center mt-5">
-      <div className="flex flex-wrap md:flex-nowrap  gap-5 md:gap-10 md:mx-10">
-        <Link className='transition duration-1000 ease-in-out  hover:scale-110  px-5 rounded-lg shadow-md  w-[230px] md:w-1/4 '>
-              <img src={Phone15} className=' w-full h-2/4 ' alt="" />
-              <div className=' flex justify-between items-center mt-3 '>
-                <div className=' flex items-center gap-10'>
-                  <span className=' font-sans font-bold'>130,000 MMK</span>
-                </div>
-                <div>
-                  <p>{10} stock</p>
-                </div>
-              </div>
-              <div className=' max-w-md'>
-                description
-              </div>
-              <div className=' float-right'>
-                <p className=' px-4 py-1 text-sm font-sans font-bold text-center text-white bg-gray-600 rounded-md w-max mt-3'>Add To Cart</p>
-              </div>
-        </Link>
-        <Link className='transition duration-1000 ease-in-out  hover:scale-110  px-5 rounded-lg shadow-md  w-[230px] md:w-1/4 '>
-              <img src={Phone15} className=' w-full h-2/4 ' alt="" />
-              <div className=' flex justify-between items-center mt-3 '>
-                <div className=' flex items-center gap-10'>
-                  <span className=' font-sans font-bold'>130,000 MMK</span>
-                </div>
-                <div>
-                  <p>{10} stock</p>
-                </div>
-              </div>
-              <div className=' max-w-md'>
-                description
-              </div>
-              <div className=' float-right'>
-                <p className=' px-4 py-1 text-sm font-sans font-bold text-center text-white bg-gray-600 rounded-md w-max mt-3'>Add To Cart</p>
-              </div>
-        </Link>
-        <Link className='transition duration-1000 ease-in-out  hover:scale-110  px-5 rounded-lg shadow-md  w-[230px] md:w-1/4 '>
-              <img src={Phone15} className=' w-full h-2/4 ' alt="" />
-              <div className=' flex justify-between items-center mt-3 '>
-                <div className=' flex items-center gap-10'>
-                  <span className=' font-sans font-bold'>130,000 MMK</span>
-                </div>
-                <div>
-                  <p>{10} stock</p>
-                </div>
-              </div>
-              <div className=' max-w-md'>
-                description
-              </div>
-              <div className=' float-right'>
-                <p className=' px-4 py-1 text-sm font-sans font-bold text-center text-white bg-gray-600 rounded-md w-max mt-3'>Add To Cart</p>
-              </div>
-        </Link>
-        <Link className='transition duration-1000 ease-in-out  hover:scale-110  px-5 rounded-lg shadow-md  w-[230px] md:w-1/4 '>
-              <img src={Phone15} className=' w-full h-2/4 ' alt="" />
-              <div className=' flex justify-between items-center mt-3 '>
-                <div className=' flex items-center gap-10'>
-                  <span className=' font-sans font-bold'>130,000 MMK</span>
-                </div>
-                <div>
-                  <p>{10} stock</p>
-                </div>
-              </div>
-              <div className=' max-w-md'>
-                description
-              </div>
-              <div className=' float-right'>
-                <p className=' px-4 py-1 text-sm font-sans font-bold text-center text-white bg-gray-600 rounded-md w-max mt-3'>Add To Cart</p>
-              </div>
-        </Link>
-        <Link className='transition duration-1000 ease-in-out  hover:scale-110  px-5 rounded-lg shadow-md  w-[230px] md:w-1/4 '>
-              <img src={Phone15} className=' w-full h-2/4 ' alt="" />
-              <div className=' flex justify-between items-center mt-3 '>
-                <div className=' flex items-center gap-10'>
-                  <span className=' font-sans font-bold'>130,000 MMK</span>
-                </div>
-                <div>
-                  <p>{10} stock</p>
-                </div>
-              </div>
-              <div className=' max-w-md'>
-                description
-              </div>
-              <div className=' float-right'>
-                <p className=' px-4 py-1 text-sm font-sans font-bold text-center text-white bg-gray-600 rounded-md w-max mt-3'>Add To Cart</p>
-              </div>
-        </Link>
+    <>
+      <div className=" container md:mx-28 grid grid-cols-4  gap-5 md:gap-40  w-full ">
+        <div className="card w-96 bg-base-100 shadow-xl">
+          <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+          <div className="card-body">
+            <h2 className="card-title">
+              Shoes!
+              <div className="badge badge-secondary">NEW</div>
+            </h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <div className="card-actions justify-end">
+              <div className="badge badge-outline">Fashion</div> 
+              <div className="badge badge-outline">Products</div>
+            </div>
+          </div>
+        </div>
+        <div className="card w-96 bg-base-100 shadow-xl">
+  <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <div className="card-body">
+    <h2 className="card-title">
+      Shoes!
+      <div className="badge badge-secondary">NEW</div>
+    </h2>
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <div className="card-actions justify-end">
+      <div className="badge badge-outline">Fashion</div> 
+      <div className="badge badge-outline">Products</div>
+    </div>
+  </div>
+</div>
+<div className="card w-96 bg-base-100 shadow-xl">
+  <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <div className="card-body">
+    <h2 className="card-title">
+      Shoes!
+      <div className="badge badge-secondary">NEW</div>
+    </h2>
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <div className="card-actions justify-end">
+      <div className="badge badge-outline">Fashion</div> 
+      <div className="badge badge-outline">Products</div>
+    </div>
+  </div>
+</div>
+<div className="card w-96 bg-base-100 shadow-xl">
+  <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <div className="card-body">
+    <h2 className="card-title">
+      Shoes!
+      <div className="badge badge-secondary">NEW</div>
+    </h2>
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <div className="card-actions justify-end">
+      <div className="badge badge-outline">Fashion</div> 
+      <div className="badge badge-outline">Products</div>
+    </div>
+  </div>
+</div>
+<div className="card w-96 bg-base-100 shadow-xl">
+  <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <div className="card-body">
+    <h2 className="card-title">
+      Shoes!
+      <div className="badge badge-secondary">NEW</div>
+    </h2>
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <div className="card-actions justify-end">
+      <div className="badge badge-outline">Fashion</div> 
+      <div className="badge badge-outline">Products</div>
+    </div>
+  </div>
+</div>
+        
       </div>
-      </div>
+    </>
   )
 }

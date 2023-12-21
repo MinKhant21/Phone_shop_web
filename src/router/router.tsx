@@ -9,46 +9,52 @@ import Home from "../pages/front/Home";
 import Layout from "../pages/front/components/Layout";
 import UserForm from '../pages/front/UserForm'
 import NotFound from "../component/NotFound";
-
-export  const Routes = () => {
-     const {user} : any = useContext(AuthContext)
-     let isAuth = Boolean(user)
-     const router = createBrowserRouter([
-          {
-               path : "/",
-               element : <Layout/>,
-               children:[
-                    {
-                         path:"",
-                         element : <Home/>
-                    },
-                    {
-                         path:'/login',
-                         element:<UserForm/>
-                    }
-               ]
-          },
-          {
-               path:"/dashboard",
-               element: isAuth ? <DLayout/> : <Navigate to={"/dashboard/login"}/>,
-               children:[
-                    {
-                         path:"",
-                         element:<AdminDashBoard/>
-                    }
-               ],
-          },
-          {
-               path:"/dashboard/login",
-               element:isAuth ? <Login/> : <Navigate to={"/dashboard"}/>,
-          },
-          {
-               path:"*",
-               element:<NotFound/>
-          }
-     ])
-
-     return(
-          <RouterProvider router={router}/>
-     )
-}
+export const Routes = () => {
+     const { user }: any = useContext(AuthContext);
+     const isAuth = Boolean(user);
+   
+     const getDashboardRoute = () => {
+       if (isAuth) {
+         return {
+           path: "/dashboard",
+           element: <DLayout />,
+           children: [
+             {
+               path: "",
+               element: <AdminDashBoard />,
+             },
+           ],
+         };
+       }
+       return {
+         path: "/dashboard/login",
+         element: <Login />,
+       };
+     };
+   
+     const routes = [
+       {
+         path: "/",
+         element: <Layout />,
+         children: [
+           {
+             path: "",
+             element: <Home />,
+           },
+           {
+             path: "/login",
+             element: <UserForm />,
+           },
+         ],
+       },
+       getDashboardRoute(),
+       {
+         path: "*",
+         element: <NotFound />,
+       },
+     ];
+   
+     const router = createBrowserRouter(routes);
+   
+     return <RouterProvider router={router} />;
+   };
