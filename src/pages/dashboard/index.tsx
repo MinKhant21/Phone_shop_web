@@ -6,7 +6,7 @@ export default function AdminDashBoard() {
   
   return (
     <>
-        <div className=" flex justify-between items-center">
+        <div className="  flex justify-between items-center">
           <div className=" py-16 px-40  rounded-md shadow-md border">Users</div>
           <div className=" py-16 px-40  rounded-md shadow-md border">Users</div>
           <div className=" py-16 px-40  rounded-md shadow-md border">Users</div>

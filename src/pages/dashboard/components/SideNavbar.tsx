@@ -2,464 +2,592 @@
 
 function SideNavbar() {
   return (
-    <>
-      <div className="md:flex justify-center min-h-screen  hidden ">
-        <div className="w-80 shadow-md ">
-          <div className="px-6 pt-8">
-            <div className="flex items-center justify-between">
-              <a
-                href="#"
-                className="bg-blue-600 p-1.5 rounded flex items-center justify-center focus:outline-none focus:ring-1 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
-                ><svg
-                  className="w-5 h-5 text-white stroke-current"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M12 4.75L19.25 9L12 13.25L4.75 9L12 4.75Z"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path>
-                  <path
-                    d="M9.25 12L4.75 15L12 19.25L19.25 15L14.6722 12"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></path></svg
-              ></a>
-              <button
-                className="flex items-center justify-center p-0.5 rounded bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-500"
-              >
-                <svg
-                  className="w-3 h-3 text-gray-300 stroke-current"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M10.25 6.75L4.75 12L10.25 17.25"
-                  ></path>
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M19.25 12H5"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div className="px-6 pt-4">
-            <div className="relative">
-              <div
-                className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none"
-              >
-                <svg
-                  className="w-4 h-4 text-gray-500 stroke-current"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M19.25 19.25L15.5 15.5M4.75 11C4.75 7.54822 7.54822 4.75 11 4.75C14.4518 4.75 17.25 7.54822 17.25 11C17.25 14.4518 14.4518 17.25 11 17.25C7.54822 17.25 4.75 14.4518 4.75 11Z"
-                  ></path>
-                </svg>
-              </div>
-              <input
-                type="text"
-                className="w-full rounded pl-8 pr-4 py-2.5 text-xs font-light bg-gray-200 text-black placeholder-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-300 focus:bg-gray-300"
-                placeholder="search"
-              />
-            </div>
-          </div>
-          <div className="px-6 pt-4">
-            <hr className="border-gray-700" />
-          </div>
-          <div className="px-6 pt-4">
-            <ul className="flex flex-col space-y-2">
-              <li className="relative text-gray-500  hover:text-white focus-within:text-white">
-                <div
-                  className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none"
-                >
-                  <svg className="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M4.75 6.75C4.75 5.64543 5.64543 4.75 6.75 4.75H17.25C18.3546 4.75 19.25 5.64543 19.25 6.75V17.25C19.25 18.3546 18.3546 19.25 17.25 19.25H6.75C5.64543 19.25 4.75 18.3546 4.75 17.25V6.75Z"
-                    ></path>
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M9.75 8.75V19"
-                    ></path>
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M5 8.25H19"
-                    ></path>
-                  </svg>
-                </div>
-                <a
-                  href="#"
-                  className="inline-block w-full py-2 pl-8 pr-4 text-xs rounded hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:bg-gray-800"
-                  >Dashboard</a
-                >
-              </li>
-              <li className="">
-                <div
-                  className="relative flex justify-between text-gray-500 hover:text-white focus-within:text-white"
-                >
-                  <div className="flex items-center w-full">
-                    <div
-                      className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none"
-                    >
-                      <svg className="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
-                        <path
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M7.75 19.25H16.25C17.3546 19.25 18.25 18.3546 18.25 17.25V9L14 4.75H7.75C6.64543 4.75 5.75 5.64543 5.75 6.75V17.25C5.75 18.3546 6.64543 19.25 7.75 19.25Z"
-                        ></path>
-                        <path
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M18 9.25H13.75V5"
-                        ></path>
-                        <path
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M9.75 15.25H14.25"
-                        ></path>
-                        <path
-                          stroke="currentColor"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M9.75 12.25H14.25"
-                        ></path>
-                      </svg>
-                    </div>
-                    <a
-                      href="#"
-                      className="inline-block w-full py-2 pl-8 pr-4 text-xs rounded hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:bg-gray-800"
-                      >Content</a
-                    >
-                  </div>
-                  <button className="absolute right-0 flex items-center p-1" tabindex="-1">
-                    <svg className="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
-                      <path
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="1.5"
-                        d="M15.25 10.75L12 14.25L8.75 10.75"
-                      ></path>
+    <div>
+    
+    <div x-data="{ sidebarOpen: false }" class="flex h-screen bg-gray-200">
+        <div :class="sidebarOpen ? 'block' : 'hidden'" @click="sidebarOpen = false" class="fixed inset-0 z-20 transition-opacity bg-black opacity-50 lg:hidden"></div>
+    
+        <div :class="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'" class="fixed inset-y-0 left-0 z-30 w-64 overflow-y-auto transition duration-300 transform bg-gray-900 lg:translate-x-0 lg:static lg:inset-0">
+            <div class="flex items-center justify-center mt-8">
+                <div class="flex items-center">
+                    <svg class="w-12 h-12" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M364.61 390.213C304.625 450.196 207.37 450.196 147.386 390.213C117.394 360.22 102.398 320.911 102.398 281.6C102.398 242.291 117.394 202.981 147.386 172.989C147.386 230.4 153.6 281.6 230.4 307.2C230.4 256 256 102.4 294.4 76.7999C320 128 334.618 142.997 364.608 172.989C394.601 202.981 409.597 242.291 409.597 281.6C409.597 320.911 394.601 360.22 364.61 390.213Z" fill="#4C51BF" stroke="#4C51BF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M201.694 387.105C231.686 417.098 280.312 417.098 310.305 387.105C325.301 372.109 332.8 352.456 332.8 332.8C332.8 313.144 325.301 293.491 310.305 278.495C295.309 263.498 288 256 275.2 230.4C256 243.2 243.201 320 243.201 345.6C201.694 345.6 179.2 332.8 179.2 332.8C179.2 352.456 186.698 372.109 201.694 387.105Z" fill="white"></path>
                     </svg>
-                  </button>
+                    
+                    <span class="mx-2 text-2xl font-semibold text-white">Dashboard</span>
                 </div>
-                <div className="pt-2 pl-4">
-                  <ul className="flex flex-col pl-2 text-gray-500 border-l border-gray-700">
-                    <li>
-                      <a
-                        href="#"
-                        className="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-1 focus:ring-gray-500 focus:text-white"
-                        >Courses</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-1 focus:ring-gray-500 focus:text-white"
-                        >Categories</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-1 focus:ring-gray-500 focus:text-white"
-                        >Instructors</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="#"
-                        className="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white focus:outline-none focus:ring-1 focus:ring-gray-500 focus:text-white"
-                        >Video Library</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li className="relative text-gray-500 hover:text-white focus-within:text-white">
-                <div
-                  className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none"
-                >
-                  <svg className="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
-                    <path
-                      d="M12 4.75L19.25 9L12 13.25L4.75 9L12 4.75Z"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                    <path
-                      d="M9.25 12L4.75 15L12 19.25L19.25 15L14.6722 12"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
-                  </svg>
-                </div>
-                <a
-                  href="#"
-                  className="inline-block w-full py-2 pl-8 pr-4 text-xs rounded hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:bg-gray-800"
-                  >Design</a
-                >
-              </li>
-              <li className="relative text-gray-500 hover:text-white focus-within:text-white">
-                <div
-                  className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none"
-                >
-                  <svg className="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
-                    <circle cx="15" cy="9" r="1" fill="currentColor"></circle>
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M12 4.75H19.25V12L12.5535 18.6708C11.7544 19.4668 10.4556 19.445 9.68369 18.6226L5.28993 13.941C4.54041 13.1424 4.57265 11.8895 5.36226 11.1305L12 4.75Z"
-                    ></path>
-                  </svg>
-                </div>
-                <a
-                  href="#"
-                  className="inline-block w-full py-2 pl-8 pr-4 text-xs rounded hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:bg-gray-800"
-                  >Market & sell</a
-                >
-              </li>
-              <li className="relative text-gray-500 hover:text-white focus-within:text-white">
-                <div
-                  className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none"
-                >
-                  <svg className="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M5.75 19.2502H6.25C6.80229 19.2502 7.25 18.8025 7.25 18.2502V15.75C7.25 15.1977 6.80229 14.75 6.25 14.75H5.75C5.19772 14.75 4.75 15.1977 4.75 15.75V18.2502C4.75 18.8025 5.19772 19.2502 5.75 19.2502Z"
-                    ></path>
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M11.75 19.2502H12.25C12.8023 19.2502 13.25 18.8025 13.25 18.2502V12.75C13.25 12.1977 12.8023 11.75 12.25 11.75H11.75C11.1977 11.75 10.75 12.1977 10.75 12.75V18.2502C10.75 18.8025 11.1977 19.2502 11.75 19.2502Z"
-                    ></path>
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M17.75 19.2502H18.25C18.8023 19.2502 19.25 18.8025 19.25 18.2502V5.75C19.25 5.19772 18.8023 4.75 18.25 4.75H17.75C17.1977 4.75 16.75 5.19772 16.75 5.75V18.2502C16.75 18.8025 17.1977 19.2502 17.75 19.2502Z"
-                    ></path>
-                  </svg>
-                </div>
-                <a
-                  href="#"
-                  className="inline-block w-full py-2 pl-8 pr-4 text-xs rounded hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:bg-gray-800"
-                  >Reporting</a
-                >
-              </li>
-              <li className="relative text-gray-500 hover:text-white focus-within:text-white">
-                <div
-                  className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none"
-                >
-                  <svg className="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="7.25"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    ></circle>
-                    <circle
-                      cx="12"
-                      cy="12"
-                      r="3.25"
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                    ></circle>
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M7 17L9.5 14.5"
-                    ></path>
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M17 17L14.5 14.5"
-                    ></path>
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M9.5 9.5L7 7"
-                    ></path>
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M14.5 9.5L17 7"
-                    ></path>
-                  </svg>
-                </div>
-                <a
-                  href="#"
-                  className="inline-block w-full py-2 pl-8 pr-4 text-xs rounded hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:bg-gray-800"
-                  >Support</a
-                >
-              </li>
-            </ul>
-          </div>
-          <div className="px-6 pt-8">
-            <hr className="border-gray-700" />
-          </div>
-          <div className="px-6 pt-4 pb-8">
-            <ul>
-              <li className="relative text-gray-500 hover:text-white focus-within:text-white">
-                <div
-                  className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none"
-                >
-                  <svg className="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M13.1191 5.61336C13.0508 5.11856 12.6279 4.75 12.1285 4.75H11.8715C11.3721 4.75 10.9492 5.11856 10.8809 5.61336L10.7938 6.24511C10.7382 6.64815 10.4403 6.96897 10.0622 7.11922C10.006 7.14156 9.95021 7.16484 9.89497 7.18905C9.52217 7.3524 9.08438 7.3384 8.75876 7.09419L8.45119 6.86351C8.05307 6.56492 7.49597 6.60451 7.14408 6.9564L6.95641 7.14408C6.60452 7.49597 6.56492 8.05306 6.86351 8.45118L7.09419 8.75876C7.33841 9.08437 7.3524 9.52216 7.18905 9.89497C7.16484 9.95021 7.14156 10.006 7.11922 10.0622C6.96897 10.4403 6.64815 10.7382 6.24511 10.7938L5.61336 10.8809C5.11856 10.9492 4.75 11.372 4.75 11.8715V12.1285C4.75 12.6279 5.11856 13.0508 5.61336 13.1191L6.24511 13.2062C6.64815 13.2618 6.96897 13.5597 7.11922 13.9378C7.14156 13.994 7.16484 14.0498 7.18905 14.105C7.3524 14.4778 7.3384 14.9156 7.09419 15.2412L6.86351 15.5488C6.56492 15.9469 6.60451 16.504 6.9564 16.8559L7.14408 17.0436C7.49597 17.3955 8.05306 17.4351 8.45118 17.1365L8.75876 16.9058C9.08437 16.6616 9.52216 16.6476 9.89496 16.811C9.95021 16.8352 10.006 16.8584 10.0622 16.8808C10.4403 17.031 10.7382 17.3519 10.7938 17.7549L10.8809 18.3866C10.9492 18.8814 11.3721 19.25 11.8715 19.25H12.1285C12.6279 19.25 13.0508 18.8814 13.1191 18.3866L13.2062 17.7549C13.2618 17.3519 13.5597 17.031 13.9378 16.8808C13.994 16.8584 14.0498 16.8352 14.105 16.8109C14.4778 16.6476 14.9156 16.6616 15.2412 16.9058L15.5488 17.1365C15.9469 17.4351 16.504 17.3955 16.8559 17.0436L17.0436 16.8559C17.3955 16.504 17.4351 15.9469 17.1365 15.5488L16.9058 15.2412C16.6616 14.9156 16.6476 14.4778 16.811 14.105C16.8352 14.0498 16.8584 13.994 16.8808 13.9378C17.031 13.5597 17.3519 13.2618 17.7549 13.2062L18.3866 13.1191C18.8814 13.0508 19.25 12.6279 19.25 12.1285V11.8715C19.25 11.3721 18.8814 10.9492 18.3866 10.8809L17.7549 10.7938C17.3519 10.7382 17.031 10.4403 16.8808 10.0622C16.8584 10.006 16.8352 9.95021 16.8109 9.89496C16.6476 9.52216 16.6616 9.08437 16.9058 8.75875L17.1365 8.4512C17.4351 8.05308 17.3955 7.49599 17.0436 7.1441L16.8559 6.95642C16.504 6.60453 15.9469 6.56494 15.5488 6.86353L15.2412 7.09419C14.9156 7.33841 14.4778 7.3524 14.105 7.18905C14.0498 7.16484 13.994 7.14156 13.9378 7.11922C13.5597 6.96897 13.2618 6.64815 13.2062 6.24511L13.1191 5.61336Z"
-                    ></path>
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M13.25 12C13.25 12.6904 12.6904 13.25 12 13.25C11.3096 13.25 10.75 12.6904 10.75 12C10.75 11.3096 11.3096 10.75 12 10.75C12.6904 10.75 13.25 11.3096 13.25 12Z"
-                    ></path>
-                  </svg>
-                </div>
-                <a
-                  href="#"
-                  className="inline-block w-full py-2 pl-8 pr-4 text-xs rounded hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:bg-gray-800"
-                  >Settings</a
-                >
-              </li>
-              <li className="relative text-gray-500 hover:text-white focus-within:text-white">
-                <div
-                  className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none"
-                >
-                  <svg className="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M17.25 12V10C17.25 7.1005 14.8995 4.75 12 4.75C9.10051 4.75 6.75 7.10051 6.75 10V12L4.75 16.25H19.25L17.25 12Z"
-                    ></path>
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M9 16.75C9 16.75 9 19.25 12 19.25C15 19.25 15 16.75 15 16.75"
-                    ></path>
-                  </svg>
-                </div>
-                <a
-                  href="#"
-                  className="inline-block w-full py-2 pl-8 pr-4 text-xs rounded hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:bg-gray-800"
-                  >Notifications</a
-                >
-              </li>
-              <li className="relative text-gray-500 hover:text-white focus-within:text-white">
-                <div
-                  className="absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none"
-                >
-                  <svg className="w-5 h-5 stroke-current" fill="none" viewBox="0 0 24 24">
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M4.75 5.75C4.75 5.19772 5.19772 4.75 5.75 4.75H9.25C9.80228 4.75 10.25 5.19772 10.25 5.75V9.25C10.25 9.80228 9.80228 10.25 9.25 10.25H5.75C5.19772 10.25 4.75 9.80228 4.75 9.25V5.75Z"
-                    ></path>
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M4.75 14.75C4.75 14.1977 5.19772 13.75 5.75 13.75H9.25C9.80228 13.75 10.25 14.1977 10.25 14.75V18.25C10.25 18.8023 9.80228 19.25 9.25 19.25H5.75C5.19772 19.25 4.75 18.8023 4.75 18.25V14.75Z"
-                    ></path>
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M13.75 5.75C13.75 5.19772 14.1977 4.75 14.75 4.75H18.25C18.8023 4.75 19.25 5.19772 19.25 5.75V9.25C19.25 9.80228 18.8023 10.25 18.25 10.25H14.75C14.1977 10.25 13.75 9.80228 13.75 9.25V5.75Z"
-                    ></path>
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1.5"
-                      d="M13.75 14.75C13.75 14.1977 14.1977 13.75 14.75 13.75H18.25C18.8023 13.75 19.25 14.1977 19.25 14.75V18.25C19.25 18.8023 18.8023 19.25 18.25 19.25H14.75C14.1977 19.25 13.75 18.8023 13.75 18.25V14.75Z"
-                    ></path>
-                  </svg>
-                </div>
-                <a
-                  href="#"
-                  className="inline-block w-full py-2 pl-8 pr-4 text-xs rounded hover:bg-gray-800 focus:outline-none focus:ring-1 focus:ring-gray-500 focus:bg-gray-800"
-                  >Apps</a
-                >
-              </li>
-            </ul>
-          </div>
-          
+            </div>
+    
+            <nav class="mt-10">
+                <a class="flex items-center px-6 py-2 mt-4 text-gray-100 bg-gray-700 bg-opacity-25" href="#">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path>
+                    </svg>
+    
+                    <span class="mx-3">Dashboard</span>
+                </a>
+    
+                <a class="flex items-center px-6 py-2 mt-4 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+                    href="#">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z">
+                        </path>
+                    </svg>
+    
+                    <span class="mx-3">UI Elements</span>
+                </a>
+    
+                <a class="flex items-center px-6 py-2 mt-4 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+                    href="#">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                        </path>
+                    </svg>
+    
+                    <span class="mx-3">Tables</span>
+                </a>
+    
+                <a class="flex items-center px-6 py-2 mt-4 text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100"
+                    href="#">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z">
+                        </path>
+                    </svg>
+    
+                    <span class="mx-3">Forms</span>
+                </a>
+            </nav>
         </div>
-      </div>
-    </>
+        <div class="flex flex-col flex-1 overflow-hidden">
+            <header class="flex items-center justify-between px-6 py-4 bg-white border-b-4 border-indigo-600">
+                <div class="flex items-center">
+                    <button @click="sidebarOpen = true" class="text-gray-500 focus:outline-none lg:hidden">
+                        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6H20M4 12H20M4 18H11" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                        </svg>
+                    </button>
+    
+                    <div class="relative mx-4 lg:mx-0">
+                        <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                            <svg class="w-5 h-5 text-gray-500" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </span>
+    
+                        <input class="w-32 pl-10 pr-4 rounded-md form-input sm:w-64 focus:border-indigo-600" type="text"
+                            placeholder="Search">
+                    </div>
+                </div>
+    
+                <div class="flex items-center">
+                    <div x-data="{ notificationOpen: false }" class="relative">
+                        <button @click="notificationOpen = ! notificationOpen"
+                            class="flex mx-4 text-gray-600 focus:outline-none">
+                            <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15 17H20L18.5951 15.5951C18.2141 15.2141 18 14.6973 18 14.1585V11C18 8.38757 16.3304 6.16509 14 5.34142V5C14 3.89543 13.1046 3 12 3C10.8954 3 10 3.89543 10 5V5.34142C7.66962 6.16509 6 8.38757 6 11V14.1585C6 14.6973 5.78595 15.2141 5.40493 15.5951L4 17H9M15 17V18C15 19.6569 13.6569 21 12 21C10.3431 21 9 19.6569 9 18V17M15 17H9"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </button>
+    
+                        <div x-show="notificationOpen" @click="notificationOpen = false"
+                            class="fixed inset-0 z-10 w-full h-full" style="display: none;"></div>
+    
+                        <div x-show="notificationOpen"
+                            class="absolute right-0 z-10 mt-2 overflow-hidden bg-white rounded-lg shadow-xl w-80"
+                            style="width: 20rem; display: none;">
+                            <a href="#"
+                                class="flex items-center px-4 py-3 -mx-2 text-gray-600 hover:text-white hover:bg-indigo-600">
+                                <img class="object-cover w-8 h-8 mx-1 rounded-full"
+                                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=334&amp;q=80"
+                                    alt="avatar">
+                                <p class="mx-2 text-sm">
+                                    <span class="font-bold" href="#">Sara Salah</span> replied on the <span
+                                        class="font-bold text-indigo-400" href="#">Upload Image</span> artical . 2m
+                                </p>
+                            </a>
+                            <a href="#"
+                                class="flex items-center px-4 py-3 -mx-2 text-gray-600 hover:text-white hover:bg-indigo-600">
+                                <img class="object-cover w-8 h-8 mx-1 rounded-full"
+                                    src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=634&amp;q=80"
+                                    alt="avatar">
+                                <p class="mx-2 text-sm">
+                                    <span class="font-bold" href="#">Slick Net</span> start following you . 45m
+                                </p>
+                            </a>
+                            <a href="#"
+                                class="flex items-center px-4 py-3 -mx-2 text-gray-600 hover:text-white hover:bg-indigo-600">
+                                <img class="object-cover w-8 h-8 mx-1 rounded-full"
+                                    src="https://images.unsplash.com/photo-1450297350677-623de575f31c?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=334&amp;q=80"
+                                    alt="avatar">
+                                <p class="mx-2 text-sm">
+                                    <span class="font-bold" href="#">Jane Doe</span> Like Your reply on <span
+                                        class="font-bold text-indigo-400" href="#">Test with TDD</span> artical . 1h
+                                </p>
+                            </a>
+                            <a href="#"
+                                class="flex items-center px-4 py-3 -mx-2 text-gray-600 hover:text-white hover:bg-indigo-600">
+                                <img class="object-cover w-8 h-8 mx-1 rounded-full"
+                                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=398&amp;q=80"
+                                    alt="avatar">
+                                <p class="mx-2 text-sm">
+                                    <span class="font-bold" href="#">Abigail Bennett</span> start following you . 3h
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div x-data="{ dropdownOpen: false }" class="relative">
+                        <button @click="dropdownOpen = ! dropdownOpen"
+                            class="relative block w-8 h-8 overflow-hidden rounded-full shadow focus:outline-none">
+                            <img class="object-cover w-full h-full"
+                                src="https://images.unsplash.com/photo-1528892952291-009c663ce843?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=296&amp;q=80"
+                                alt="Your avatar">
+                        </button>
+    
+                        <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 z-10 w-full h-full"
+                            style="display: none;"></div>
+    
+                        <div x-show="dropdownOpen"
+                            class="absolute right-0 z-10 w-48 mt-2 overflow-hidden bg-white rounded-md shadow-xl"
+                            style="display: none;">
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white">Profile</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white">Products</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-600 hover:text-white">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200">
+                <div class="container px-6 py-8 mx-auto">
+                    <h3 class="text-3xl font-medium text-gray-700">Dashboard</h3>
+    
+                    <div class="mt-4">
+                        <div class="flex flex-wrap -mx-6">
+                            <div class="w-full px-6 sm:w-1/2 xl:w-1/3">
+                                <div class="flex items-center px-5 py-6 bg-white rounded-md shadow-sm">
+                                    <div class="p-3 bg-indigo-600 bg-opacity-75 rounded-full">
+                                        <svg class="w-8 h-8 text-white" viewBox="0 0 28 30" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M18.2 9.08889C18.2 11.5373 16.3196 13.5222 14 13.5222C11.6804 13.5222 9.79999 11.5373 9.79999 9.08889C9.79999 6.64043 11.6804 4.65556 14 4.65556C16.3196 4.65556 18.2 6.64043 18.2 9.08889Z"
+                                                fill="currentColor"></path>
+                                            <path
+                                                d="M25.2 12.0444C25.2 13.6768 23.9464 15 22.4 15C20.8536 15 19.6 13.6768 19.6 12.0444C19.6 10.4121 20.8536 9.08889 22.4 9.08889C23.9464 9.08889 25.2 10.4121 25.2 12.0444Z"
+                                                fill="currentColor"></path>
+                                            <path
+                                                d="M19.6 22.3889C19.6 19.1243 17.0927 16.4778 14 16.4778C10.9072 16.4778 8.39999 19.1243 8.39999 22.3889V26.8222H19.6V22.3889Z"
+                                                fill="currentColor"></path>
+                                            <path
+                                                d="M8.39999 12.0444C8.39999 13.6768 7.14639 15 5.59999 15C4.05359 15 2.79999 13.6768 2.79999 12.0444C2.79999 10.4121 4.05359 9.08889 5.59999 9.08889C7.14639 9.08889 8.39999 10.4121 8.39999 12.0444Z"
+                                                fill="currentColor"></path>
+                                            <path
+                                                d="M22.4 26.8222V22.3889C22.4 20.8312 22.0195 19.3671 21.351 18.0949C21.6863 18.0039 22.0378 17.9556 22.4 17.9556C24.7197 17.9556 26.6 19.9404 26.6 22.3889V26.8222H22.4Z"
+                                                fill="currentColor"></path>
+                                            <path
+                                                d="M6.64896 18.0949C5.98058 19.3671 5.59999 20.8312 5.59999 22.3889V26.8222H1.39999V22.3889C1.39999 19.9404 3.2804 17.9556 5.59999 17.9556C5.96219 17.9556 6.31367 18.0039 6.64896 18.0949Z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                    </div>
+    
+                                    <div class="mx-5">
+                                        <h4 class="text-2xl font-semibold text-gray-700">8,282</h4>
+                                        <div class="text-gray-500">New Users</div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 sm:mt-0">
+                                <div class="flex items-center px-5 py-6 bg-white rounded-md shadow-sm">
+                                    <div class="p-3 bg-orange-600 bg-opacity-75 rounded-full">
+                                        <svg class="w-8 h-8 text-white" viewBox="0 0 28 28" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4.19999 1.4C3.4268 1.4 2.79999 2.02681 2.79999 2.8C2.79999 3.57319 3.4268 4.2 4.19999 4.2H5.9069L6.33468 5.91114C6.33917 5.93092 6.34409 5.95055 6.34941 5.97001L8.24953 13.5705L6.99992 14.8201C5.23602 16.584 6.48528 19.6 8.97981 19.6H21C21.7731 19.6 22.4 18.9732 22.4 18.2C22.4 17.4268 21.7731 16.8 21 16.8H8.97983L10.3798 15.4H19.6C20.1303 15.4 20.615 15.1004 20.8521 14.6261L25.0521 6.22609C25.2691 5.79212 25.246 5.27673 24.991 4.86398C24.7357 4.45123 24.2852 4.2 23.8 4.2H8.79308L8.35818 2.46044C8.20238 1.83722 7.64241 1.4 6.99999 1.4H4.19999Z"
+                                                fill="currentColor"></path>
+                                            <path
+                                                d="M22.4 23.1C22.4 24.2598 21.4598 25.2 20.3 25.2C19.1403 25.2 18.2 24.2598 18.2 23.1C18.2 21.9402 19.1403 21 20.3 21C21.4598 21 22.4 21.9402 22.4 23.1Z"
+                                                fill="currentColor"></path>
+                                            <path
+                                                d="M9.1 25.2C10.2598 25.2 11.2 24.2598 11.2 23.1C11.2 21.9402 10.2598 21 9.1 21C7.9402 21 7 21.9402 7 23.1C7 24.2598 7.9402 25.2 9.1 25.2Z"
+                                                fill="currentColor"></path>
+                                        </svg>
+                                    </div>
+    
+                                    <div class="mx-5">
+                                        <h4 class="text-2xl font-semibold text-gray-700">200,521</h4>
+                                        <div class="text-gray-500">Total Orders</div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="w-full px-6 mt-6 sm:w-1/2 xl:w-1/3 xl:mt-0">
+                                <div class="flex items-center px-5 py-6 bg-white rounded-md shadow-sm">
+                                    <div class="p-3 bg-pink-600 bg-opacity-75 rounded-full">
+                                        <svg class="w-8 h-8 text-white" viewBox="0 0 28 28" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6.99998 11.2H21L22.4 23.8H5.59998L6.99998 11.2Z" fill="currentColor"
+                                                stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+                                            <path
+                                                d="M9.79999 8.4C9.79999 6.08041 11.6804 4.2 14 4.2C16.3196 4.2 18.2 6.08041 18.2 8.4V12.6C18.2 14.9197 16.3196 16.8 14 16.8C11.6804 16.8 9.79999 14.9197 9.79999 12.6V8.4Z"
+                                                stroke="currentColor" stroke-width="2"></path>
+                                        </svg>
+                                    </div>
+    
+                                    <div class="mx-5">
+                                        <h4 class="text-2xl font-semibold text-gray-700">215,542</h4>
+                                        <div class="text-gray-500">Available Products</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="mt-8">
+    
+                    </div>
+    
+                    <div class="flex flex-col mt-8">
+                        <div class="py-2 -my-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8">
+                            <div
+                                class="inline-block min-w-full overflow-hidden align-middle border-b border-gray-200 shadow sm:rounded-lg">
+                                <table class="min-w-full">
+                                    <thead>
+                                        <tr>
+                                            <th
+                                                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                                                Name</th>
+                                            <th
+                                                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                                                Title</th>
+                                            <th
+                                                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                                                Status</th>
+                                            <th
+                                                class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                                                Role</th>
+                                            <th class="px-6 py-3 border-b border-gray-200 bg-gray-50"></th>
+                                        </tr>
+                                    </thead>
+    
+                                    <tbody class="bg-white">
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <div class="flex items-center">
+                                                    <div class="flex-shrink-0 w-10 h-10">
+                                                        <img class="w-10 h-10 rounded-full"
+                                                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                                                            alt="">
+                                                    </div>
+    
+                                                    <div class="ml-4">
+                                                        <div class="text-sm font-medium leading-5 text-gray-900">John Doe
+                                                        </div>
+                                                        <div class="text-sm leading-5 text-gray-500">john@example.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+    
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <div class="text-sm leading-5 text-gray-900">Software Engineer</div>
+                                                <div class="text-sm leading-5 text-gray-500">Web dev</div>
+                                            </td>
+    
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <span
+                                                    class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
+                                            </td>
+    
+                                            <td
+                                                class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200">
+                                                Owner</td>
+    
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium leading-5 text-right whitespace-no-wrap border-b border-gray-200">
+                                                <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <div class="flex items-center">
+                                                    <div class="flex-shrink-0 w-10 h-10">
+                                                        <img class="w-10 h-10 rounded-full"
+                                                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                                                            alt="">
+                                                    </div>
+    
+                                                    <div class="ml-4">
+                                                        <div class="text-sm font-medium leading-5 text-gray-900">John Doe
+                                                        </div>
+                                                        <div class="text-sm leading-5 text-gray-500">john@example.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+    
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <div class="text-sm leading-5 text-gray-900">Software Engineer</div>
+                                                <div class="text-sm leading-5 text-gray-500">Web dev</div>
+                                            </td>
+    
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <span
+                                                    class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
+                                            </td>
+    
+                                            <td
+                                                class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200">
+                                                Owner</td>
+    
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium leading-5 text-right whitespace-no-wrap border-b border-gray-200">
+                                                <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <div class="flex items-center">
+                                                    <div class="flex-shrink-0 w-10 h-10">
+                                                        <img class="w-10 h-10 rounded-full"
+                                                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                                                            alt="">
+                                                    </div>
+    
+                                                    <div class="ml-4">
+                                                        <div class="text-sm font-medium leading-5 text-gray-900">John Doe
+                                                        </div>
+                                                        <div class="text-sm leading-5 text-gray-500">john@example.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+    
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <div class="text-sm leading-5 text-gray-900">Software Engineer</div>
+                                                <div class="text-sm leading-5 text-gray-500">Web dev</div>
+                                            </td>
+    
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <span
+                                                    class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
+                                            </td>
+    
+                                            <td
+                                                class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200">
+                                                Owner</td>
+    
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium leading-5 text-right whitespace-no-wrap border-b border-gray-200">
+                                                <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <div class="flex items-center">
+                                                    <div class="flex-shrink-0 w-10 h-10">
+                                                        <img class="w-10 h-10 rounded-full"
+                                                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                                                            alt="">
+                                                    </div>
+    
+                                                    <div class="ml-4">
+                                                        <div class="text-sm font-medium leading-5 text-gray-900">John Doe
+                                                        </div>
+                                                        <div class="text-sm leading-5 text-gray-500">john@example.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+    
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <div class="text-sm leading-5 text-gray-900">Software Engineer</div>
+                                                <div class="text-sm leading-5 text-gray-500">Web dev</div>
+                                            </td>
+    
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <span
+                                                    class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
+                                            </td>
+    
+                                            <td
+                                                class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200">
+                                                Owner</td>
+    
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium leading-5 text-right whitespace-no-wrap border-b border-gray-200">
+                                                <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <div class="flex items-center">
+                                                    <div class="flex-shrink-0 w-10 h-10">
+                                                        <img class="w-10 h-10 rounded-full"
+                                                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                                                            alt="">
+                                                    </div>
+    
+                                                    <div class="ml-4">
+                                                        <div class="text-sm font-medium leading-5 text-gray-900">John Doe
+                                                        </div>
+                                                        <div class="text-sm leading-5 text-gray-500">john@example.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+    
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <div class="text-sm leading-5 text-gray-900">Software Engineer</div>
+                                                <div class="text-sm leading-5 text-gray-500">Web dev</div>
+                                            </td>
+    
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <span
+                                                    class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
+                                            </td>
+    
+                                            <td
+                                                class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200">
+                                                Owner</td>
+    
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium leading-5 text-right whitespace-no-wrap border-b border-gray-200">
+                                                <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <div class="flex items-center">
+                                                    <div class="flex-shrink-0 w-10 h-10">
+                                                        <img class="w-10 h-10 rounded-full"
+                                                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                                                            alt="">
+                                                    </div>
+    
+                                                    <div class="ml-4">
+                                                        <div class="text-sm font-medium leading-5 text-gray-900">John Doe
+                                                        </div>
+                                                        <div class="text-sm leading-5 text-gray-500">john@example.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+    
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <div class="text-sm leading-5 text-gray-900">Software Engineer</div>
+                                                <div class="text-sm leading-5 text-gray-500">Web dev</div>
+                                            </td>
+    
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <span
+                                                    class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
+                                            </td>
+    
+                                            <td
+                                                class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200">
+                                                Owner</td>
+    
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium leading-5 text-right whitespace-no-wrap border-b border-gray-200">
+                                                <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <div class="flex items-center">
+                                                    <div class="flex-shrink-0 w-10 h-10">
+                                                        <img class="w-10 h-10 rounded-full"
+                                                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                                                            alt="">
+                                                    </div>
+    
+                                                    <div class="ml-4">
+                                                        <div class="text-sm font-medium leading-5 text-gray-900">John Doe
+                                                        </div>
+                                                        <div class="text-sm leading-5 text-gray-500">john@example.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+    
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <div class="text-sm leading-5 text-gray-900">Software Engineer</div>
+                                                <div class="text-sm leading-5 text-gray-500">Web dev</div>
+                                            </td>
+    
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <span
+                                                    class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
+                                            </td>
+    
+                                            <td
+                                                class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200">
+                                                Owner</td>
+    
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium leading-5 text-right whitespace-no-wrap border-b border-gray-200">
+                                                <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <div class="flex items-center">
+                                                    <div class="flex-shrink-0 w-10 h-10">
+                                                        <img class="w-10 h-10 rounded-full"
+                                                            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80"
+                                                            alt="">
+                                                    </div>
+    
+                                                    <div class="ml-4">
+                                                        <div class="text-sm font-medium leading-5 text-gray-900">John Doe
+                                                        </div>
+                                                        <div class="text-sm leading-5 text-gray-500">john@example.com</div>
+                                                    </div>
+                                                </div>
+                                            </td>
+    
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <div class="text-sm leading-5 text-gray-900">Software Engineer</div>
+                                                <div class="text-sm leading-5 text-gray-500">Web dev</div>
+                                            </td>
+    
+                                            <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                                                <span
+                                                    class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full">Active</span>
+                                            </td>
+    
+                                            <td
+                                                class="px-6 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200">
+                                                Owner</td>
+    
+                                            <td
+                                                class="px-6 py-4 text-sm font-medium leading-5 text-right whitespace-no-wrap border-b border-gray-200">
+                                                <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
   );
 }
 

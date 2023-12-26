@@ -3,7 +3,7 @@ import { RiDeleteBin6Fill } from "react-icons/ri";
 import AddUser from './modals/addUser'
 export default function UserList() {
   return (
-    <div>
+    <>
       <h1 className=" text-3xl text-black font-sans font-semibold mb-5">Users List</h1>
       <hr />
       <div className="flex flex-col">
@@ -71,6 +71,6 @@ export default function UserList() {
         </div>
       </div>
 
-    </div>
+    </>
   )
 }
