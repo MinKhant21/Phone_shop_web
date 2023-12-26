@@ -1,26 +1,36 @@
-import MonthlyChat from "./components/chart/MonthlyChat";
-import DoughnutChart from "./components/chart/DoughnutChart";
-// import UserTable from '../dashboard/components/UserTable'
+import CardFour from './components/CardFour.tsx';
+import CardOne from './components/CardOne.tsx';
+import CardThree from './components/CardThree.tsx';
+import CardTwo from './components/CardTwo.tsx';
+import ChartOne from './components/ChartOne.tsx';
+import ChartThree from './components/ChartThree.tsx';
+import ChartTwo from './components/ChartTwo.tsx';
+import ChatCard from './components/ChatCard.tsx';
+import MapOne from './components/MapOne.tsx';
+import TableOne from './components/TableOne.tsx';
+
 
 export default function AdminDashBoard() {
   
   return (
     <>
-        <div className="  flex justify-between items-center">
-          <div className=" py-16 px-40  rounded-md shadow-md border">Users</div>
-          <div className=" py-16 px-40  rounded-md shadow-md border">Users</div>
-          <div className=" py-16 px-40  rounded-md shadow-md border">Users</div>
-          <div className=" py-16 px-40  rounded-md shadow-md border">Users</div>
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7.5">
+        <CardOne />
+        <CardTwo />
+        <CardThree />
+        <CardFour />
+      </div>
+
+      <div className="mt-4 grid grid-cols-12 gap-4 md:mt-6 md:gap-6 2xl:mt-7.5 2xl:gap-7.5">
+        <ChartOne />
+        <ChartTwo />
+        <ChartThree />
+        <MapOne />
+        <div className="col-span-12 xl:col-span-8">
+          <TableOne />
         </div>
-        <div className=" flex gap-10 mt-10 items-center">
-          <div className=" w-[740px] shadow-md p-5 border">
-            <MonthlyChat/>
-          </div>
-          <div className="flex justify-center items-center mx-auto w-[400px] ">
-            <DoughnutChart/>
-          </div>
-        </div>
-        {/* <UserTable/> */}
+        <ChatCard />
+      </div>
     </>
   )
 }
