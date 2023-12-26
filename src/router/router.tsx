@@ -9,6 +9,7 @@ import Login from "../pages/dashboard/Login";
 import DLayout from "../pages/dashboard/components/Layout";
 import AdminDashBoard from "../pages/dashboard";
 import UserList from "../pages/dashboard/UserList";
+import UserFormHandle from "../pages/dashboard/components/UserFormHandle";
 export const Routes = () => {
   const { user   }: any = useContext(AuthContext);
   const isAuth = Boolean(user);
@@ -24,6 +25,10 @@ export const Routes = () => {
             {
               path:"/dashboard/users",
               element:<UserList/>
+            },
+            {
+              path:"user/create",
+              element:<UserFormHandle/>
             }
           ],
         },
