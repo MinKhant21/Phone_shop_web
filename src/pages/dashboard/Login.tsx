@@ -19,13 +19,11 @@ export default function Login() {
     }
     await Login(data)
   }
-  useEffect(()=>{
-   
-  },[])
+
   return (
     <div className=" h-screen w-full flex justify-center items-center mx-auto">
       <h1>{loading && <p>loading.........</p>}</h1>
-      <div className=" p-5 w-[700px] h-[350px] border   shadow-md rounded-md flex-row justify-center items-center">
+      <div className=" p-5 w-[700px] bg-white h-[350px] border   shadow-md rounded-md flex-row justify-center items-center">
         <div className=" border-b-2 pb-5">
           <h1 className=" text-center font-sans font-semibold">Admin Dashboard Login in</h1>
         </div>
@@ -58,7 +56,7 @@ export default function Login() {
             {message ? <p className=" mr-20 mt-3 text-red-500 text-sm">{message}</p> :  ""}
         </div>
         <div className="flex justify-center items-center mt-10">
-          <button  onClick={HandleLogin} className=" p-2 bg-purple-400 text-white w-2/3 rounded-md">Login</button>
+          <button  onClick={HandleLogin} className=" p-2 bg-purple-400 text-white bg-primary w-2/3 rounded-md">Login</button>
         </div>
       </div>
     </div>
