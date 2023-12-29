@@ -9,13 +9,14 @@ export default function UserList() {
   },[])
   return (
     <>
-     {
-      !loading ?
+     
       <div className="rounded-sm border border-stroke bg-white px-5 pt-6 pb-2.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1">
       <Link to={"/dashboard/user/create"} className=" cursor-pointer  px-3 w-15 py-2 text-white rounded-lg text-center mb-5 f bg-danger">
         Add
       </Link>
       <br />
+      {
+      !loading ?
       <div className="max-w-full overflow-x-auto">
         <table className="w-full table-auto">
           <thead>
@@ -43,8 +44,9 @@ export default function UserList() {
           </tbody>
         </table>
       </div>
-    </div> : <Loading/>
+      : <h1>Not have Data</h1>
      } 
+    </div> 
     </>
   )
 }

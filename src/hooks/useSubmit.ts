@@ -20,6 +20,22 @@ const useSubmit =  () => {
                [name]: value,
           }));
      }
+
+     const SignUp = async (formData :any) => {
+          setLoading(true)
+          await axios.post(`${BACKEND_URL}/sign-up`,formData,{
+               headers:{
+                    'Content-Type': 'application/json'
+               },
+               method:"post"
+          }).then((result : any)=>{
+               if(result.data.status == "200")
+                    setLoading(false)
+          }).catch((err:any)=>{
+               console.log(err)
+          })
+     }
+
      const Login = async (formData:any) => {
           setLoading(true)
           let email : string= formData.email
@@ -55,6 +71,7 @@ const useSubmit =  () => {
      }
      return {
           Login,
+          SignUp,
           loading,
           message,
           user,
