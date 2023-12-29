@@ -7,17 +7,11 @@ interface Data {
 }
 export default function Login() {
   const [show,setShow] = useState(true);
-  const [email,setEmail] = useState<string>('');
-  const [password,setPassword] = useState<string>('');
-  const {Login,loading,message,user} = useSubmit();
+  const {Login,loading,message,user,HandleInput,formData} = useSubmit();
 
   const HandleLogin = async (e:any) => {
     e.preventDefault();
-    let data:Data = {
-      email,
-      password
-    }
-    await Login(data)
+    await Login(formData)
   }
 
   return (
@@ -32,7 +26,7 @@ export default function Login() {
           <input type="text" name="email" 
             className=" w-1/2 p-1 rounded-md border pl-4" 
             placeholder="Enter Your Email" 
-            onChange={(e)=>setEmail(e.target.value)}
+            onChange={HandleInput}
             />
         </div>
         <div className=" flex justify-center items-center gap-4 mt-10  ">
@@ -41,7 +35,7 @@ export default function Login() {
               <input type={`${show ? 'password' : 'text'}`} name="password" 
                 className="w-full p-1 rounded-md bg-white border pl-4" 
                 placeholder="Enter Your password" 
-                onChange={(e)=>setPassword(e.target.value)}
+                onChange={HandleInput}
               />
               <div className=" absolute top-2 right-3 cursor-pointer" onClick={()=>setShow(!show)}>
                 {

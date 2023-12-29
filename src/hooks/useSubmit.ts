@@ -10,10 +10,20 @@ const useSubmit =  () => {
      const [loading,setLoading] = useState(false);
      const [message , setMessage] = useState('');
      const [user ,setUser] = useState([])
-     const Login = async (data : Data ) => {
+     const [formData,setFormData] = useState()
+
+     const HandleInput = (event : any)  => {
+          let {name,value} = event.target
+          console.log(name,value)
+          setFormData((preVState)=>({
+               ...preVState,
+               [name]: value,
+          }));
+     }
+     const Login = async (formData:any) => {
           setLoading(true)
-          let email : string= data.email
-          let password : string = data.password
+          let email : string= formData.email
+          let password : string = formData.password
            await axios.post(`${BACKEND_URL}/login`,
                { 
                     email,
@@ -47,7 +57,9 @@ const useSubmit =  () => {
           Login,
           loading,
           message,
-          user
+          user,
+          HandleInput,
+          formData
      }
 }
 
