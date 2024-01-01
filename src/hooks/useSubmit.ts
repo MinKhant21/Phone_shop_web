@@ -7,10 +7,12 @@ interface Data {
 }
 
 const useSubmit =  () => {
+
      const [loading,setLoading] = useState(false);
      const [message , setMessage] = useState('');
      const [user ,setUser] = useState([])
      const [formData,setFormData] = useState()
+
 
      const HandleInput = (event : any)  => {
           let {name,value} = event.target
@@ -19,6 +21,23 @@ const useSubmit =  () => {
                ...preVState,
                [name]: value,
           }));
+     }
+
+     const HandleCategoryForm =async (formData :any) => {
+          setLoading(true)
+          
+          await axios.post(`${BACKEND_URL}/category`,formData,{
+               headers:{
+                    'Content-Type': 'application/json',
+                    "x-auth-token" : localStorage.getItem('token')
+               },
+               method:"post"
+          }).then((result : any)=>{
+               if(result.data.status == "200")
+                    setLoading(false)
+          }).catch((err:any)=>{
+               console.log(err)
+          })
      }
 
      const SignUp = async (formData :any) => {
@@ -76,7 +95,8 @@ const useSubmit =  () => {
           message,
           user,
           HandleInput,
-          formData
+          formData,
+          HandleCategoryForm
      }
 }
 
