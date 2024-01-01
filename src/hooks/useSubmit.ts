@@ -22,43 +22,28 @@ const useSubmit = () => {
   };
 
   const HandleCategoryForm = async (formData: any, type = "POST", id = "") => {
-    setLoading(true);
-    var url = `${BACKEND_URL}/category`;
-    var method = type;
-    if (type === "DELETE") {
-      var url = `${url}?id=${id}`;
-      method = "DELETE";
-      await axios
-        .delete(url, {
-          headers: {
-            "Content-Type": "application/json",
-            "x-auth-token": localStorage.getItem("token"),
-          },
-          method: method,
-        })
-        .then((result: any) => {
-          if (result.data.status == "200") setLoading(false);
-        })
-        .catch((err: any) => {
-          console.log(err);
-        });
-    }
-    if (type === "POST") {
-      await axios
-        .post(url, formData, {
-          headers: {
-            "Content-Type": "application/json",
-            "x-auth-token": localStorage.getItem("token"),
-          },
-          method: method,
-        })
-        .then((result: any) => {
-          if (result.data.status == "200") setLoading(false);
-        })
-        .catch((err: any) => {
-          console.log(err);
-        });
-    }
+     setLoading(true);
+     const method = type === "DELETE" ? "DELETE" : "POST";
+     const url =
+       type === "DELETE"
+         ? `${BACKEND_URL}/category?id=${id}`
+         : `${BACKEND_URL}/category`;
+ 
+     try {
+       const result = await axios({
+         method,
+         url,
+         data: formData,
+         headers: {
+           "Content-Type": "application/json",
+           "x-auth-token": localStorage.getItem("token") || "",
+         },
+       });
+ 
+       if (result.data.status === "200") setLoading(false);
+     } catch (error) {
+       console.log(error);
+     }
   };
 
   const SignUp = async (formData: any) => {
