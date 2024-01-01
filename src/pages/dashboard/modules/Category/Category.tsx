@@ -12,12 +12,21 @@ export default function Category() {
           "Content-Type": "application/json",
           "x-auth-token": localStorage.getItem("token"),
         },
+        method: "GET",
       });
       setCategories(res.data.categories);
     } catch (error: any) {
       console.log(error);
     }
   }, [BACKEND_URL]);
+
+  const handleDel = (id: any) => {
+    // Filter the categories array to exclude the category with the specified id
+    const updatedCategories = categories.filter((category) => {
+      return category.category_id !== id;
+    });
+    setCategories(updatedCategories);
+  };
 
   useEffect(() => {
     getCategories();
@@ -56,7 +65,11 @@ export default function Category() {
             </div>
           </div>
           {categories.map((category, index) => (
-            <CategoryList category={category} index={index} />
+            <CategoryList
+              category={category}
+              index={index}
+              handleDel={handleDel}
+            />
           ))}
         </div>
       </div>
