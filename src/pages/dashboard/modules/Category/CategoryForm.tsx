@@ -1,6 +1,10 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import useSubmit from "../../../../hooks/useSubmit";
+import { useEffect, useState } from "react";
 export default function CreateCategory() {
+  let {id} = useParams()
+  let [isEdit,setIsEdit] = useState(false)
+ 
   let { HandleInput, formData, loading, HandleCategoryForm } = useSubmit();
   let navigate = useNavigate();
   const HandleSubmit = async () => {
@@ -9,6 +13,13 @@ export default function CreateCategory() {
       navigate("/dashboard/categories");
     }
   };
+  useEffect(()=>{
+    if(id){
+      setIsEdit(true)
+    }else{
+      setIsEdit(false)
+    }
+  },[])
   return (
     <div className=" ">
       <Link
@@ -19,7 +30,7 @@ export default function CreateCategory() {
       </Link>
       <div className="rounded-sm  h-1/2  bg-white px-5 pt-6 pb-2.5 dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1">
         <h4 className="mb-6 text-xl font-semibold text-black dark:text-white">
-          Create Category
+          {isEdit ? "Edit Category" : "Create Category"}
         </h4>
         <hr className=" my-4" />
         <div className=" space-x-6">

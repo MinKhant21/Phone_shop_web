@@ -11,7 +11,7 @@ import AdminDashBoard from "../pages/dashboard";
 import User from "../pages/dashboard/User";
 import UserFormHandle from "../pages/dashboard/components/user/UserFormHandle";
 import Category from "../pages/dashboard/modules/Category/Category";
-import CreateCategory from "../pages/dashboard/modules/Category/CreateCategory";
+import CategoryForm from "../pages/dashboard/modules/Category/CategoryForm";
 
 
 
@@ -41,7 +41,11 @@ export const Routes = () => {
             },
             {
               path:"/dashboard/categories/create",
-              element:<CreateCategory/>
+              element:<CategoryForm/>
+            },
+            {
+              path:"/dashboard/category/edit/:id",
+              element:<CategoryForm/>
             }
           ],
         },

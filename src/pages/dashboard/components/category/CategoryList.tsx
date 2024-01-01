@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import useSubmit from "../../../../hooks/useSubmit";
 
 interface CategoryProps {
@@ -22,6 +23,8 @@ export default function CategoryList({
     await HandleCategoryForm(FormData, "DELETE", id);
   };
 
+ 
+
   return (
     <div className="grid grid-cols-3 border-b border-stroke dark:border-strokedark sm:grid-cols-5">
       <div className="flex items-center justify-center p-2.5 xl:p-5">
@@ -33,9 +36,10 @@ export default function CategoryList({
       </div>
 
       <div className="hidden items-center justify-center p-2.5 sm:flex xl:p-5 space-x-5">
-        <p className="text-meta-5 cursor-pointer">EDIT</p>
+          
+        <Link to={`/dashboard/category/edit/${category.category_id}`} className="text-meta-5 cursor-pointer">EDIT</Link>
         <p
-          onClick={() => HandleSubmit(category.category_id)}
+          onClick={() => HandleSubmit(category. category_id)}
           className=" text-meta-1 cursor-pointer"
         >
           DELETE
