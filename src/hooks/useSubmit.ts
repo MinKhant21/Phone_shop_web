@@ -23,13 +23,15 @@ const useSubmit = () => {
 
   const HandleCategoryForm = async (formData: any, type = "POST", id = "") => {
      setLoading(true);
-     const method = type === "DELETE" ? "DELETE" : "POST";
+     const method = type === "DELETE" ? "DELETE" : type === "POST" ? "POST" : "PATCH";
      const url =
        type === "DELETE"
          ? `${BACKEND_URL}/category?id=${id}`
-         : `${BACKEND_URL}/category`;
+         : type === "POST" ? `${BACKEND_URL}/category`
+         : `${BACKEND_URL}/category?id=${id}`
  
      try {
+      console.log(formData)
        const result = await axios({
          method,
          url,
@@ -108,6 +110,7 @@ const useSubmit = () => {
     user,
     HandleInput,
     formData,
+    setFormData,
     HandleCategoryForm,
   };
 };
