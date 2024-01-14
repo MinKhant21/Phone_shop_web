@@ -2,28 +2,27 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import useSubmit from "../../../../hooks/useSubmit";
 import { useCallback, useEffect, useState } from "react";
 import useSearch from "../../../../hooks/useSearch";
+import { BACKEND_URL } from "../../../../utils/constant";
+import axios from "axios";
 export default function CreateCategory() {
   let { id } = useParams();
   let [isEdit, setIsEdit] = useState(false);
 
   let { HandleInput, formData, setFormData, loading, HandleCategoryForm } =
     useSubmit();
-  let { searchIdFetch, searchData } = useSearch();
 
-  const [updateData, setUpdateData] = useState({ name: "" });
-
+  const [updateData, setUpdateData] :any[] = useState([]) ;
 
   let navigate = useNavigate();
   const HandleSubmit = async () => {
     if (isEdit) {
-      alert("editform");
-      // let data  = {
-      //   name: updateData,
-      // } as any;
-      // await HandleCategoryForm(data, "PATCH", searchData.category_id);
-      // if (loading == false) {
-      //   navigate("/dashboard/categories");
-      // }
+      let data = {
+        name : updateData
+      }
+      await HandleCategoryForm(data, "PATCH", id);
+      if (loading == false) {
+        navigate("/dashboard/categories");
+      }
     } else {
       await HandleCategoryForm(formData);
       if (loading == false) {
@@ -32,27 +31,30 @@ export default function CreateCategory() {
     }
   };
 
-  const fetchHookSearchID = useCallback(async () => {
-    let res = await searchIdFetch({ id, module: "Category" });
-    console.log(res)
-      // console.log(searchData)
-      // await setUpdateData((prev) => ({ ...prev, name: searchData.name }));
-      // console.log(updateData);
-  }, [searchIdFetch, setUpdateData, id, searchData]);
-  
+
+  const fetchHookSearchID =async () => {
+    let res = await axios.get(
+      `${BACKEND_URL}/search?id=${id}&module=Category`,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          "x-auth-token": localStorage.getItem("token"),
+        },
+      }
+    )
+    setUpdateData(res.data.data)
+  }  
   useEffect(() => {
     if (id) {
       setIsEdit(true);
-        fetchHookSearchID();
-      console.log('mounted')
-      console.log(updateData)
-      console.log('unmounted')
 
+      fetchHookSearchID();
+      
     } else {
       setIsEdit(false);
     }
   }, []);
-  
+
   return (
     <div className=" ">
       <Link
@@ -70,13 +72,15 @@ export default function CreateCategory() {
           <label htmlFor="">Name : </label>
           {isEdit ? (
             <input
-            type="text"
-            name="name"
-            value={updateData.name}
-            onChange={(e) => setUpdateData((prev) => ({ ...prev, name: e.target.value }))}
-            className="border-collapse border border-meta-1 p-2 rounded-md"
-            placeholder="Enter Category Name"
-          />
+              type="text"
+              name="name"
+              value={updateData.name}
+              onChange={(e) =>
+                setUpdateData(e.target.value)
+              }
+              className="border-collapse border border-meta-1 p-2 rounded-md"
+              placeholder="Enter Category Name"
+            />
           ) : (
             <input
               type="text"
